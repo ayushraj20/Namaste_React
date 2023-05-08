@@ -1,36 +1,34 @@
-// Manipulate the HTML DOM using Javscript
-// const heading = document.createElement("h1");
-// heading.innerHTML = "Namaste Everyone";
-// const root = document.getElementById("root");
-// root.appendChild(heading);
+/**
+ *
+ * <div id="parent">
+ *      <div id="child">
+ *         <h1>I'm h1 tag</h1>
+ *         <h2>I'm h1 tag</h2>
+ *      </div>
+ * <div id="child2">
+ *         <h1>I'm h1 tag</h1>
+ *         <h2>I'm h1 tag</h2>
+ *      </div>
+ * </div>
+ *
+ * ReactElement(Object) => HTML(Browser Understands)
+ */
 
-// Manipulate the HTML DOM using React
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "I'm an h1 tag"),
+    React.createElement("h2", {}, "I'm an h2 tag"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "I'm an h1 tag"),
+    React.createElement("h2", {}, "I'm an h2 tag"),
+  ]),
+]);
 
-// Create nested React Elements
-const heading = React.createElement(
-  "h1",
-  {
-    id: "title",
-  },
-  "heading"
-);
-const heading1 = React.createElement(
-  "h1",
-  {
-    id: "title",
-  },
-  "heading1"
-);
+//JSX
 
-const container = React.createElement(
-  "div",
-  {
-    id: "container",
-  },
-  [heading, heading1]
-);
+console.log(parent); // object
 
-// create root using createRoot
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// passing react element inside root
-root.render(container);
+
+root.render(parent);
