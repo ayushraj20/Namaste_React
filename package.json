@@ -1,0 +1,14 @@
+{
+  "name": "episode-02---igniting-our-app",
+  "version": "1.0.0",
+  "description": "This is Episode 2 of Namaste React Webseries",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ayush Raj",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
