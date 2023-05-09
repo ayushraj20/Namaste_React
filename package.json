@@ -4,7 +4,9 @@
   "description": "This is Episode 2 of Namaste React Webseries",
   
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Ayush Raj",
   "license": "ISC",

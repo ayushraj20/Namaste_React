@@ -1,19 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", {}, "Knox9 was here 🚀 "),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I'm an h1 tag"),
-    React.createElement("h2", {}, "I'm an h2 tag"),
-  ]),
-]);
+// React Element
+const heading = (
+  <h1 id="heading" className="head" tabIndex={5}>
+    Namaste React 🚀 using JSX
+  </h1>
+);
 
-console.log(parent);
+// React Component (Functional)
+const HeadingComponent = () => {
+  return (
+    <div id="container">
+      <h1>{heading}</h1>
+      <h1 className="heading">Namaste React from Component 🚀 🤡</h1>
+    </div>
+  );
+};
+
+// both HeadingComponent and HeadingComponent2 are same only syntax is different.
+const HeadingComponent2 = () => (
+  <div id="container">
+    <h1>Namaste React from Component</h1>
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+// root.render(heading); // -> Rendering a React Element.
+
+root.render(<HeadingComponent />); // -> Rendering a React Component.
